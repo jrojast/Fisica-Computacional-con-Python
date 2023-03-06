@@ -3,6 +3,8 @@
 Created on Sun Jan 16 22:17:44 2022
 
 @author: justo
+
+Programa que simula el caminante aleatorio en una red unidimensional
 """
 
 import matplotlib.pyplot as plt
@@ -12,7 +14,7 @@ from random import random
 from numpy.random import seed
 seed(2)
 
-n = 100   # numero de pasos (propor al tiempo)
+n = 100   # numero de pasos (proporcional al tiempo)
 M = 2000  # el numero de eventos o caminantes 
 p = 0.35 # probabilida de ir hacia la derecha 
 xm=0   # 
@@ -33,7 +35,6 @@ for j in range(1,M-1):
 
 xbar = xm/(float(M))
 x2bar = x2m/(float(M))
-#var=x2bar-xbar**2
 sigma = np.sqrt(x2bar-xbar**2)
 print('<x>=',xbar-n)
 print('sigma',sigma)
