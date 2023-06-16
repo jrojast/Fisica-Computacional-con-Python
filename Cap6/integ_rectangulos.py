@@ -17,8 +17,8 @@ def integ_rectangulo (N,a,b,f):
     N: cantidad de subintervalos
     f: funcion a integrar
     """
-    dx = (b-a)/N
-    x = np.arange(a,b,dx)
+    dx = (b-a)/N # longitud del subintervalo
+    x = np.arange(a,b,dx) # coordenadas de los subintervalos 
     suma = 0
     for i in range(N):
         suma = suma + f(x[i])
